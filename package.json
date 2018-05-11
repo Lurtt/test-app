@@ -22,7 +22,7 @@
     "webpack-dev-server": "webpack-dev-server --port 9000 --hot"
   },
   "lint-staged": {
-    "*.{js,json,css,md}": ["yarn prettier", "yarn lint", "git add"]
+    "*.{js,json,css,md}": ["yarn format", "yarn lint", "git add"]
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
