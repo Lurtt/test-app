@@ -1,6 +1,6 @@
 {
   "name": "webpack-academy",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "basic webpack configuration example",
   "main": "index.js",
   "repository": {
@@ -22,7 +22,11 @@
     "webpack-dev-server": "webpack-dev-server --port 9000 --hot"
   },
   "lint-staged": {
-    "*.{js,css}": ["yarn format", "yarn lint", "git add"]
+    "*.{js,css}": [
+      "yarn format",
+      "yarn lint",
+      "git add"
+    ]
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
