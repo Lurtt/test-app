@@ -12,7 +12,7 @@
   "scripts": {
     "start": "yarn webpack-dev-server --env.env dev",
     "build": "yarn webpack --env.env prod",
-    "prebuild": "rimraf dist",
+    "prebuild": "rimraf dist && yarn format && yarn lint",
     "precommit": "lint-staged",
     "format": "yarn prettier --write",
     "lint": "eslint --ext .js src --fix",
@@ -22,7 +22,7 @@
     "webpack-dev-server": "webpack-dev-server --port 9000 --hot"
   },
   "lint-staged": {
-    "*.{js,json,css,md}": ["yarn format", "yarn lint", "git add"]
+    "*.{js,css}": ["yarn format", "yarn lint", "git add"]
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
