@@ -1,19 +1,23 @@
 import React, { Component, Fragment } from 'react'
 import styled from 'styled-components'
 
-import { Select, Input, DatePicker } from './components'
+import { Select, Input, DatePicker, List, Label, Submit } from './components'
 import Api from './api'
 
 const options = ['Done', 'In Process']
 
+const Form = styled.form`
+  margin: 2rem 0;
+`
+
 const FormField = styled.div`
   display: flex;
   flex-direction: column;
+  margin: 0 1rem;
 `
 
 const Row = styled.div`
   display: flex;
-
   justify-content: center;
 `
 
@@ -68,10 +72,10 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <form onSubmit={this.handleSubmit}>
+        <Form onSubmit={this.handleSubmit}>
           <Row>
             <FormField>
-              <label htmlFor="status">File status</label>
+              <Label htmlFor="status">File status</Label>
               <Select
                 id="status"
                 value={this.state.formData.status}
@@ -81,7 +85,7 @@ class App extends Component {
             </FormField>
 
             <FormField>
-              <label htmlFor="date-creation">Date creation</label>
+              <Label htmlFor="date-creation">Date creation</Label>
               <DatePicker
                 id="date-creation"
                 type="date"
@@ -90,7 +94,7 @@ class App extends Component {
             </FormField>
 
             <FormField>
-              <label htmlFor="name">File name</label>
+              <Label htmlFor="name">File name</Label>
               <Input
                 id="name"
                 placeholder="File name"
@@ -99,9 +103,10 @@ class App extends Component {
             </FormField>
           </Row>
           <Row>
-            <input type="submit" value="Submit" />
+            <Submit value="Submit" />
           </Row>
-        </form>
+        </Form>
+        <List data={this.state.data} />
       </Fragment>
     )
   }
