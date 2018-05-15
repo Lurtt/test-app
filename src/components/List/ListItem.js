@@ -25,7 +25,7 @@ export default function(props) {
       </Field>
       <Field>
         <Label>Date creation</Label>
-        <div>{new Date(props.creationDate).toString().slice(3, 15)}</div>
+        <div>{props.creationDate}</div>
       </Field>
       <Field>
         <Label>Status</Label>

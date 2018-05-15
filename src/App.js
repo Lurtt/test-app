@@ -60,7 +60,7 @@ class App extends Component {
   }
 
   handleDateChange = event => {
-    const date = new Date(event.target.value).valueOf()
+    const date = event.target.value === NaN ? '' : event.target.value
     this.setState(prevState => ({
       formData: {
         ...prevState.formData,
