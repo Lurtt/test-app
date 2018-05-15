@@ -25,3 +25,9 @@ Before build it will clean dist folder, run prettier and eslint
 ```shell
 $ yarn build
 ```
+
+#### Test
+
+```shell
+$ yarn test
+```
