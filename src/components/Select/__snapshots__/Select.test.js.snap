@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Select /> Should render only one option 1`] = `
+<select
+  className="sc-bdVaJa YQfmf"
+  value="placeholder"
+>
+  <option
+    disabled={true}
+    value="placeholder"
+  >
+    Select your option
+  </option>
+</select>
+`;

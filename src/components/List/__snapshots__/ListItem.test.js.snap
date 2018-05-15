@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListItem /> Should render 1`] = `
+<div
+  className="sc-EHOje kopLCo"
+>
+  <div
+    className="sc-bZQynM bMDeTa"
+  >
+    <Label>
+      File name
+    </Label>
+    <div>
+      Commodo.mp3
+    </div>
+  </div>
+  <div
+    className="sc-bZQynM bMDeTa"
+  >
+    <Label>
+      Date creation
+    </Label>
+    <div>
+      2007-05-16
+    </div>
+  </div>
+  <div
+    className="sc-bZQynM bMDeTa"
+  >
+    <Label>
+      Status
+    </Label>
+    <div>
+      In Process
+    </div>
+  </div>
+</div>
+`;

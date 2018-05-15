@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DatePicker /> Should accept {...props} 1`] = `
+<input
+  className="sc-bdVaJa YQfmf"
+  id={1}
+  type="date"
+  value="2007-05-16"
+/>
+`;
+
+exports[`<DatePicker /> Should render 1`] = `
+<input
+  className="sc-bdVaJa YQfmf"
+  type="date"
+/>
+`;

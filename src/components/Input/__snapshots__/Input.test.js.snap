@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> Should accept {...props} 1`] = `
+<input
+  className="sc-bdVaJa YQfmf"
+  id={1}
+  type="text"
+  value="some text"
+/>
+`;
+
+exports[`<Input /> Should render 1`] = `
+<input
+  className="sc-bdVaJa YQfmf"
+  type="text"
+/>
+`;
