@@ -4,6 +4,7 @@ import renderer from 'react-test-renderer'
 import ListItem from './ListItem'
 
 jest.mock('../Label', () => 'Label')
+jest.mock('../Loading', () => 'Loading')
 
 const mockData = {
   id: 1,

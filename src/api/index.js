@@ -7,8 +7,14 @@ const filterByName = (state, item) => item.name.indexOf(state.name) > -1
 
 export default {
   search: state =>
-    fakeData
-      .filter(filterByCreationDate.bind(this, state))
-      .filter(filterByStatus.bind(this, state))
-      .filter(filterByName.bind(this, state)),
+    new Promise(resolve => {
+      setTimeout(() => {
+        resolve(
+          fakeData
+            .filter(filterByCreationDate.bind(this, state))
+            .filter(filterByStatus.bind(this, state))
+            .filter(filterByName.bind(this, state))
+        )
+      }, 3000)
+    }),
 }

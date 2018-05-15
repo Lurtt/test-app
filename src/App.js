@@ -1,7 +1,15 @@
 import React, { Component, Fragment } from 'react'
 import styled from 'styled-components'
 
-import { Select, Input, DatePicker, List, Label, Submit } from './components'
+import {
+  Select,
+  Input,
+  DatePicker,
+  List,
+  Label,
+  Submit,
+  Loading,
+} from './components'
 import Api from './api'
 
 const options = ['Done', 'In Process']
@@ -28,13 +36,18 @@ class App extends Component {
       name: '',
       date: '',
     },
+    loading: false,
     data: [],
   }
 
-  handleSubmit = event => {
+  handleSubmit = async event => {
     event.preventDefault()
-    const result = Api.search(this.state.formData)
     this.setState({
+      loading: true,
+    })
+    const result = await Api.search(this.state.formData)
+    this.setState({
+      loading: false,
       data: result,
     })
   }
@@ -106,7 +119,7 @@ class App extends Component {
             <Submit value="Submit" />
           </Row>
         </Form>
-        <List data={this.state.data} />
+        {this.state.loading ? <Loading /> : <List data={this.state.data} />}
       </Fragment>
     )
   }
